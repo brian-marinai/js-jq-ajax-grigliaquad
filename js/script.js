@@ -6,6 +6,9 @@ function getRandNumbListener() {
 }
 
 function getRundNumber() {
+
+  var griditem = $(this);
+
   console.log("click");
   $.ajax({
 
@@ -13,7 +16,7 @@ function getRundNumber() {
     method : "get",
     success : function(data, state) {
 
-      var griditem = $("#grid-item");
+
       var success = data["success"];
       var value = data["response"];
 
@@ -43,20 +46,6 @@ function getRundNumber() {
   });
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function init() {
   getRandNumbListener();
 
